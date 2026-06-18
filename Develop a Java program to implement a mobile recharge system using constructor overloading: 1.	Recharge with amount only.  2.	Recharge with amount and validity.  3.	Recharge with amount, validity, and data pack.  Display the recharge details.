@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+void main() {
+    Scanner scanner = new Scanner(System.in);
+    
+    String[] p1 = scanner.nextLine().trim().split("\\s+");
+    new Recharge(Integer.parseInt(p1[0]));
+    System.out.println();
+
+    String[] p2 = scanner.nextLine().trim().split("\\s+");
+    new Recharge(Integer.parseInt(p2[0]), Integer.parseInt(p2[1]));
+    System.out.println();
+
+    String[] p3 = scanner.nextLine().trim().split("\\s+");
+    new Recharge(Integer.parseInt(p3[0]), Integer.parseInt(p3[1]), p3[2]);
+
+    scanner.close();
+}
+
+class Recharge {
+    Recharge(int amount) {
+        System.out.println("Recharge Amount: " + amount);
+    }
+    
+    Recharge(int amount, int validity) {
+        System.out.println("Recharge Amount: " + amount);
+        System.out.println("Validity: " + validity + " Days");
+    }
+    
+    Recharge(int amount, int validity, String dataPack) {
+        System.out.println("Recharge Amount: " + amount);
+        System.out.println("Validity: " + validity + " Days");
+        System.out.println("Data Pack: " + dataPack);
+    }
+}
