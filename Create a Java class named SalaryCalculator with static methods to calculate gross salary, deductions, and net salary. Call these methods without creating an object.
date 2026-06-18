@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+void main() {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("enter basic salary: ");
+    double basicSalary = scanner.nextDouble();
+    
+    System.out.print("enter allowance: ");
+    double allowance = scanner.nextDouble();
+    
+    System.out.print("enter deduction: ");
+    double deduction = scanner.nextDouble();
+    
+    double grossSalary = SalaryCalculator.calculateGross(basicSalary, allowance);
+    double netSalary = SalaryCalculator.calculateNet(grossSalary, deduction);
+    
+    System.out.println("Gross Salary = " + (int)grossSalary);
+    System.out.println("Net Salary = " + (int)netSalary);
+    
+    scanner.close();
+}
+
+class SalaryCalculator {
+    static double calculateGross(double basic, double allowance) {
+        return basic + allowance;
+    }
+
+    static double calculateNet(double gross, double deduction) {
+        return gross - deduction;
+    }
+}
+
