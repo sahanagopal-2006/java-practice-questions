@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Enter product details: ");
+        String input = scanner.nextLine();
+        String[] parts = input.split(" ");
+       
+        if (parts.length == 1) {
+            System.out.println("Product: " + parts[0]);
+        }
+        else if (parts.length == 2) {
+            System.out.println("Product: " + parts[0]);
+            System.out.println("Quantity: " + parts[1]);
+        }
+        else if (parts.length == 3) {
+            System.out.println("Product: " + parts[0]);
+            System.out.println("Quantity: " + parts[1]);
+            System.out.println("Discount Code: " + parts[2]);
+        }
+       
+        scanner.close();
+    }
+}
