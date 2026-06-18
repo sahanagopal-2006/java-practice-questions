@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        String input = "JaVa ProGRam";
+        String result = "";
+
+        for (char c : input.toCharArray()) {
+            result += Character.isUpperCase(c) ? 
+                      Character.toLowerCase(c) : Character.toUpperCase(c);
+        }
+
+        System.out.println(result);
+    }
+}
